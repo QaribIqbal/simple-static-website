@@ -1,0 +1,225 @@
+.body {
+    margin: 0px;
+    padding: 0px;
+    background-color:rgb(151, 218, 244);
+}
+
+.container {
+    display: flex;
+    margin: 0%;
+    padding: 0%;
+}
+
+.navbar {
+
+    /* z-index: -1; */
+    display: flex;
+    position: absolute;
+    list-style: none;
+    /* border: 3px red solid; */
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: bolder;
+    /* background-color: antiquewhite; */
+    background-color:rgb(151, 218, 244);
+    margin: 0%;
+    padding: 0%;
+    width: 110%;
+}
+
+.navbar li {
+    padding: 0.5%;
+    margin: 0.5%;
+    font-size: large;
+    /* border: 3px red solid; */
+    color: black;
+}
+
+.searchbox {
+    /* z-index: -1; */
+    /* display: block; */
+    position: absolute;
+    float: right;
+    right: 10%;
+    margin-top: 1%;
+    width: 15%;
+    /* border: 3px red solid; */
+    /* justify-content: right; */
+    border-radius: 1vh;
+    height: 3vh;
+    /* margin-left: 60%; */
+}
+.navbar li:hover {
+    /* color: rgb(114, 113, 113); */
+    color: goldenrod;
+    cursor: pointer
+}
+.home{
+    max-width:100%;
+    max-height: 70vh;
+}
+.welcome {
+    display: block;
+    margin-top: 2%;
+    padding-top: 12%;
+    max-height:60vh;
+    max-width: 100%;
+    /* position: absolute; */
+    /* display: flex; */
+    margin: 0%;
+    /* padding: 0%; */
+    font-size: 5vh;
+    align-items: center;
+    color:white;  
+    text-align: center;
+    word-wrap: wrap;
+    background-image: url(images/head\ img.jpg);
+    background-size: 100%;  
+    background-position: center;
+    background-repeat: no-repeat;
+    /* z-index: -1;  */
+}   
+/* .text{
+    
+} */
+.image{
+    z-index: -1 ;
+    margin-top: 3%;
+    opacity:1.0;
+    /* margin: 0%; */
+         padding: 10%;
+         padding-left: 0%;
+         height: 25vh;       
+         width: 100%;
+        background-image: url(images/head\ img.jpg);
+        background-size: 9%;
+        background-position: center;
+        background-repeat: no-repeat;  
+    }
+    .box1 {
+        display: flex;
+        /* padding: 5%; */
+        background-size: 100%;
+        background-repeat: no-repeat;
+        display: inline-block;
+        border: 3px black solid;
+        width: 30%;
+        height: auto;
+        margin-left: 15%;
+        margin-top: 2%;
+        background-color: aliceblue;
+        box-shadow: 10px 50px 15px 12px rgba(21, 21, 21, 0.949);
+        text-align: center;
+        justify-content: center;
+        
+    }
+    .b1t1{
+        /* border: 2px solid red; */
+        padding: 0%;
+        display: flex;
+        margin-left: 33%;
+        /* margin-left: 5%; */
+        /* padding: 30%; */
+    }
+    .image1
+    {
+        height: auto;
+        width: 100%;
+
+    }
+    .btn{
+        padding: 5%;
+        /* margin-left: 40%; */
+        border-radius: 20%;
+        padding-top: 2%;
+        padding-bottom: 2.5%;
+        background-color:gold;
+    }
+    
+.box2
+{
+    /* background-image: url(images/pow.jpg); */
+    background-size: 100%;
+    background-repeat: no-repeat;
+    display: inline-block;
+    /* flex-direction: column; */
+    border: 3px black solid;
+    width: 30%;
+    height: auto;
+    margin-left: 7%;
+    margin-top: 0%;
+    background-color: aliceblue;
+    box-shadow: 10px 50px 15px 12px rgba(21, 21, 21, 0.949);
+    text-align: center;
+    justify-content: center;
+}
+.b2t2{
+    display: inline-block;
+    margin: auto;
+    /* margin-left: 42%; */
+    padding: 0%;
+}
+
+.image2
+{
+    height:auto;
+        width:100%;
+    }
+    .btn:hover{
+    cursor: pointer;
+    background-color: rgb(235, 200, 1);
+}
+@media only screen and (min-width:44px) and (max-width:890px)
+{
+    .b1t1{
+        display: inline-block;
+        margin: auto;
+    }
+}
+@media only screen and (max-width:500px){
+    .welcome{
+        font-size:4vh;
+        /* padding: 20%; */
+    }
+}
+@media only screen and (max-width:412px){
+  .navbar li{
+    font-size: 1.5vh;
+  }
+  .searchbox{
+    height: 2vh;
+    margin-top: 0%;
+    font-size: 0.9vh;
+  }
+    .home{
+     max-height: 100%;
+   }
+    .welcome{
+        font-size:4vh;
+    }
+    .welcome h1{
+        margin-top: 15%;
+        margin-bottom: 5%;
+    }
+    .welcome h4{
+        margin-top: 1%;
+        font-size:3vh;
+        margin-bottom: 2%;
+    }
+    .b1t1{
+        margin-left: -5%;
+    }
+    .b2t2{
+        margin-left: 28%;
+    }
+    .box2{
+        margin-left: 13%;
+    }
+    .box1{
+        margin-left: 13%;
+    }
+}
+@media only screen and (max-width:400px){
+    .b2t2{
+        margin-left:15%;
+    }
+}
