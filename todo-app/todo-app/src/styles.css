@@ -1,0 +1,25 @@
+/* You can add global styles to this file, and also import other style files */
+body{
+    user-select: none;
+   background-color: #fff;
+}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+.mat-snack-bar-container {
+    background: white; /* Background color */
+    color: red;         /* Text color */
+    font-size: 3vh;     /* Font size */
+    position:absolute;
+    top: 8%;
+    left: 35%;
+    text-align: center;
+}
+.mat-mdc-snack-bar-container{
+    background: white; /* Background color */
+    color: red;         /* Text color */
+    font-size: 3vh;     /* Font size */
+    position:absolute;
+    top: 8%;
+    left: 35%;
+    text-align: center;
+}

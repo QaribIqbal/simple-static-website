@@ -1,0 +1,66 @@
+.marked{
+    text-decoration: line-through darkgreen;
+}
+body{
+    text-align: center;
+    background-color: white;
+    height: 100vh;
+    width: 100vw;
+}
+#savedtasks, #taskdone{
+height: 50vh;
+overflow-x: hidden;
+overflow-y: auto;
+}
+#title, #title2{
+    margin: auto;
+    font-weight: bolder;
+   /* color: aliceblue;*/
+   color:rgb(220, 53, 69); 
+   text-shadow: 0 0 1px black;
+    background-image: linear-gradient(to right, lightyellow,gold);
+}
+#title2{
+    background-image: linear-gradient(to right, lightyellow,green);
+}
+#notask{
+    text-align: center;
+    margin: auto;
+    color: gold;
+    text-shadow: 0 0 2px black;
+    font-style: italic;
+    font-weight: light;
+    margin-top: 30vh;
+}
+#id{
+    color: green;
+    background-color: green;
+}
+input[type="checkbox"].check {
+    /*webkit-appearance: none;   */
+    width: 20px; /* Width of the checkbox */
+    height: 20px; /* Height of the checkbox */
+    border: 2px solid #ccc; /* Border styling */
+    border-radius: 3px; /* Rounded corners */
+    outline: none; /* Remove outline on focus */
+    cursor: pointer; /* Change cursor on hover */
+    position: relative; /* Positioning for the pseudo-element */
+}
+
+input[type="checkbox"].check:checked {
+    appearance:none;  
+    color: green; /* Green background when checked */
+    /* Green border when checked */
+    background-color: green;
+}
+#btn:hover{
+cursor: pointer;
+}
+.msg, .msg2{
+    color: green;
+    margin-top: 8%;
+}
+.msg2
+{
+    color: rgb(220, 53, 69)
+}

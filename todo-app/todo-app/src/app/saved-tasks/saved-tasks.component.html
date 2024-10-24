@@ -1,0 +1,78 @@
+<body>
+  <div id="savedtasks">
+    <h1 id="title">Remaining Tasks</h1>
+    <div *ngIf="rindex>0; else noremaintask">
+  <div *ngIf="(savedtasks$ | async)?.length !== 0; else elseBlock">
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Title</th>
+        <th scope="col">Description</th>
+        <th scope="col">Due date</th>
+        <th scope="col">Actions</th>
+        <th scope="col">Mark as done</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let t of savedtasks$|async; let i = index">
+        <th *ngIf="t.active" [ngClass]="{'marked': t.active==false}" scope="row">{{i + 1}}</th>
+        <td *ngIf="t.active" [ngClass]="{'marked': t.active==false}">{{t.title}}</td>
+        <td *ngIf="t.active" [ngClass]="{'marked': t.active==false}">{{t.task}}</td>
+        <td *ngIf="t.active" [ngClass]="{'marked': t.active==false}">{{ t.date | date:'dd/MM/yyyy'}}</td>
+        <td *ngIf="t.active"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="darkred" class="bi bi-trash" id="btn" viewBox="0 0 16 16" (click)="deltask(t.id)">
+          <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0z"/>
+          <path d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4zM2.5 3h11V2h-11z"/>
+        </svg>
+        </td>
+        <td *ngIf="t.active"><input type="checkbox" class="check" (click)="mark(t.id)" [checked]="!t.active"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+</div>
+<ng-template #elseBlock>
+  <h1 id="notask"><i>No Tasks saved yet!</i></h1>
+</ng-template>
+</div>
+<ng-template #noremaintask>
+  <h1 class="msg"><i>No more tasks, all done!</i></h1>
+</ng-template>
+<!-------------------------------->
+<div id="taskdone">
+<h1 id="title2">Task Done</h1>
+  <!--<div *ngIf="(savedtasks$ | async)?.length !== 0; else elseBlock">--->
+<div *ngIf="sindex>0; else elseBlock2">
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Title</th>
+        <th scope="col">Description</th>
+        <th scope="col">Due date</th>
+        <th scope="col">Actions</th>
+        <th scope="col">Mark as done</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let t of savedtasks$|async; let i = index">
+        <th *ngIf="!t.active" [ngClass]="{'marked': t.active==false}" (ngModule)="sindex=1" scope="row">{{i + 1}}</th>
+        <td *ngIf="!t.active" [ngClass]="{'marked': t.active==false}">{{t.title}}</td>
+        <td *ngIf="!t.active" [ngClass]="{'marked': t.active==false}">{{t.task}}</td>
+        <td *ngIf="!t.active" [ngClass]="{'marked': t.active==false}">{{t.date | date:'dd/MM/yyyy'}}</td>
+        <td *ngIf="!t.active"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="darkred" class="bi bi-trash" id="btn" viewBox="0 0 16 16" (click)="deltask(t.id)">
+          <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0z"/>
+          <path d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4zM2.5 3h11V2h-11z"/>
+        </svg>
+        </td>
+        <td *ngIf="!t.active"><input type="checkbox" class="check" (click)="mark(t.id)" [checked]="!t.active"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<ng-template #elseBlock2>
+  <h1 class="msg2"><i>No Task done yet!</i></h1>
+</ng-template>
+</div>
+</body>

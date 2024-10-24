@@ -1,0 +1,91 @@
+<!-- Section: Design Block -->
+<section class="text-center">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+  <!-- Background image -->
+  <div class="p-5 bg-image" style="
+        background-image: url('https://mdbootstrap.com/img/new/textures/full/171.jpg');
+        height: 300px;
+        background-size: cover;
+        background-position: center;
+        "></div>
+  <!-- Background image -->
+
+  <div class="card mx-4 mx-md-5 shadow-5-strong bg-body-tertiary" style="
+        margin-top: -100px;
+        backdrop-filter: blur(30px);
+        ">
+    <div class="card-body py-5 px-md-5">
+      <div class="row d-flex justify-content-center">
+        <div class="col-lg-8">
+          <h2 class="fw-bold mb-5">Sign up now</h2>
+          <form [formGroup]="signupform" (ngSubmit)="Signup_submit()">
+            <!-- 2 column grid layout with text inputs for the first and last names -->
+            <div class="row">
+              <div class="col-md-6 mb-4">
+                <div class="form-outline">
+                  <input type="text" id="form3Example1" class="form-control" formControlName="First_name" />
+                  <label class="form-label" for="form3Example1"
+                    *ngIf="signupform.get('First_name')!.invalid && signupform.get('First_name')!.touched; else ValidFirstname"
+                    style="color:red">Enter a first name <i class="bi bi-exclamation-circle-fill"></i></label>
+                </div>
+                <ng-template #ValidFirstname>
+                  <label class="form-label" for="form3Example1">First name</label>
+                </ng-template>
+              </div>
+              <div class="col-md-6 mb-4">
+                <div class="form-outline">
+                  <input type="text" id="form3Example2" class="form-control" formControlName="Last_name" />
+                  <div>
+                    <label
+                      *ngIf="signupform.get('Last_name')!.invalid && signupform.get('Last_name')!.touched; else ValidLastname"
+                      style="color:red">Enter a last name <i class="bi bi-exclamation-circle-fill"></i></label>
+                  </div>
+                  <ng-template #ValidLastname>
+                    <label class="form-label" for="form3Example2">Last name</label>
+                  </ng-template>
+                </div>
+              </div>
+            </div>
+
+            <!-- Email input -->
+            <div class="form-outline mb-4">
+              <input type="email" id="form3Example3" class="form-control" formControlName="Email" />
+              <div>
+                <label *ngIf="signupform.get('Email')!.invalid && signupform.get('Email')!.touched; else ValidEmail"
+                  style="color:red">Enter a vaild email <i class="bi bi-exclamation-circle-fill"></i></label>
+              </div>
+              <ng-template #ValidEmail>
+                <label class="form-label" for="form3Example3">Email address</label>
+              </ng-template>
+            </div>
+
+            <!-- Password input -->
+            <div class="form-outline mb-4">
+              <input type="password" id="form3Example4" class="form-control" formControlName="Password" />
+              <div>
+                <label
+                  *ngIf="signupform.get('Password')!.invalid && signupform.get('Password')!.touched; else ValidPassword"
+                  style="color:red">Enter your password <i class="bi bi-exclamation-circle-fill"></i></label>
+              </div>
+              <ng-template #ValidPassword>
+                <label class="form-label" for="form3Example4">Password</label>
+              </ng-template>
+            </div>
+            <!-- Submit button -->
+            <button type="submit" class="btn btn-primary btn-block mb-4">Sign up</button>
+           <div>
+              <label *ngIf="sub else signin" style="color:green"><i>Signed up successfully! </i> <p class="small fw-bold mt-2 pt-1 mb-0"><a routerLink="/Login" class="link-danger">Login now</a></p></label>
+           </div>
+            <ng-template #signin>
+              <p class="small fw-bold mt-2 pt-1 mb-0">Already have an account? <a routerLink="/Login" class="link-danger">Login</a></p>
+              </ng-template>
+            
+            <!-- Register buttons -->
+           
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Section: Design Block -->

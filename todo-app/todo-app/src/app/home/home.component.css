@@ -1,0 +1,26 @@
+.vh-100 {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #007bff, #ffffff);
+  }
+  
+  .text-primary {
+    color: #007bff !important;
+  }
+  
+  .btn-outline-primary {
+    border-color: #007bff;
+    color: #007bff;
+  }
+  
+  .btn-outline-primary:hover {
+    background-color: #007bff;
+    color: #ffffff;
+  }
+  #lead2{
+    color: white !important;
+    text-shadow: 0 0 1vh black;
+  }
+  

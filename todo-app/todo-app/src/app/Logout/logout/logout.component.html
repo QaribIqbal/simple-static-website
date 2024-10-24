@@ -1,0 +1,22 @@
+<div class="d-flex justify-content-center align-items-center vh-100 bg-light">
+    <div class="card text-center shadow-lg p-4" style="width: 350px;">
+      <div class="card-body">
+        <h5 class="card-title mb-3">Are you sure you want to log out?</h5>
+        <div class="d-flex justify-content-around">
+          <button
+            class="btn btn-danger px-4"
+            (click)="auth.signOut()"
+          >
+            Logout
+          </button>
+          <button
+            class="btn btn-secondary px-4"
+            routerLink="/Savedtasks"
+          >
+            Cancel
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  

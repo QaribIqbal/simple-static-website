@@ -1,0 +1,31 @@
+<nav class="navbar navbar-expand-lg navbar-light custom-navbar">
+  <a class="navbar-brand text-warning"><b>TODO List</b></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav">
+      <a class="nav-item nav-link active text-warning" routerLink="/Home">Home</a>
+      <a routerLink="/Savedtasks" class="nav-item nav-link text-warning">Tasks</a>
+      <a routerLink="/Todaytasks" class="nav-item nav-link text-warning">Today tasks</a>
+      <a *ngIf="auth.isLoggedIn == true" class="nav-item nav-link text-warning" routerLink="/LogOut">Logout</a>
+      <a *ngIf="auth.isLoggedIn == false" routerLink="/Login" class="nav-item nav-link text-warning">Login</a>
+    </div>
+    <button id="task-btn" class="btn btn-warning" (click)="toggleForm()">Add Task</button> <!-- Add Task Button -->
+  </div>
+</nav>
+
+<!-- Add Task Pop-Up Form -->
+<div *ngIf="showForm" class="popup-form">
+  <h2 class="title">TODO LIST</h2>
+  <form [formGroup]="form" (ngSubmit)="saveTask()">
+    <h4 class="text">Title:</h4>
+    <input type="text" class="text2" placeholder=" Task title" formControlName="title">
+    <h4 class="text">Description:</h4>
+    <input type="text" class="text2" placeholder=" Task description here" formControlName="task">
+    <input type="date" style="display: none;" formControlName="active">
+    <h4 class="text">Due date:</h4>
+    <input type="date" class="text2" formControlName="date">
+    <button class="sub-btn">Submit</button>
+  </form>
+</div>

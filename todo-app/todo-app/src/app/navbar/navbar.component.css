@@ -1,0 +1,79 @@
+  .task-added-snackbar {
+    background-color: white;
+    color: green;
+    border: 1px solid green;
+  }
+  
+  .task-error-snackbar {
+    background-color: white;
+    color: red;
+    border: 1px solid red;
+  }
+  .custom-navbar {
+    padding-left: 1%;
+    background-image: linear-gradient(to right, rgb(13, 110, 253), rgb(0, 33, 81));
+    color: aliceblue;
+    user-select: none;
+  }
+  
+  .navbar-brand {
+    pointer-events: none;
+  }
+  
+  .custom-navbar .nav-link {
+    color: white !important;
+    font-weight: medium;
+  }
+  
+  .custom-navbar .nav-link:hover {
+    color: rgb(255, 228, 76) !important;
+  }
+  
+  .navbar-brand {
+    color: white !important;
+  }
+  
+  .navbar-brand:hover {
+    color: gold !important;
+  }
+  
+  .popup-form {
+    border-radius: 3.5vh;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background: linear-gradient(135deg, #007bff, #cef3ff);
+    text-shadow: 0 0 2vh black;
+    /*background-color: rgb(1, 80, 198);*/
+  color: gold;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+  }
+  #task-btn{
+    background-color: transparent;
+    border: none;
+    color:lightgreen;
+    font-weight: 500;
+  }
+  #task-btn:hover{
+color: gold;
+  }
+  .sub-btn{
+    color: rgb(56, 171, 56);
+    color: rgb(255, 224, 47);
+    font-weight: bold;
+    background-color: #dc3545;
+    padding: 3%;
+    margin: 0%;
+    margin-top: 5%;
+    margin-bottom: -5%;
+    border-radius: 2vh;
+    margin-left: 35%;
+    border: none;
+  }
+  .text2{
+    border-radius: 2vh;
+    border: 0.15vh solid black;
+  }
